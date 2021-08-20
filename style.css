@@ -1,0 +1,193 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 10px;
+}
+
+body {
+    height: 100vh;
+    font-size: 1.6rem;
+    font-family: 'Noto Sans JP', sans-serif;
+    /* font-family: 'Signika', sans-serif; */
+}
+
+p,
+a {
+    color: rgba(255, 255, 255, .9);
+}
+
+.cor {
+    color: rgb(64, 179, 224);
+}
+
+main {
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    background-image: url(./mae-mu-yOVltxVbRHA-unsplash.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+/*Form -------------------------------------*/
+
+#signin-form {
+    display: flex;
+    flex-direction: column;
+    padding: 6rem 6rem 2rem;
+    background-color: rgba(27, 26, 27, .9);
+    border-radius: .5rem;
+}
+
+
+/*logo*/
+
+#logo-container {
+    margin-bottom: 5rem;
+}
+
+#logo {
+    font-size: 4rem;
+    text-align: center;
+    font-family: 'Josefin Sans', sans-serif;
+    letter-spacing: .1rem;
+}
+
+
+/*label and input*/
+
+.input-container {
+    position: relative;
+    width: 100%;
+}
+
+.lbl {
+    top: 0;
+    left: 0;
+    right: 0;
+    color: rgba(255, 255, 255, .9);
+    display: flex;
+    align-items: center;
+    position: absolute;
+    cursor: text;
+    transition: .2s ease-in-out;
+}
+
+input {
+    color: rgba(255, 255, 255, .9);
+    background-color: transparent;
+    border: 0;
+    border-bottom: 2px solid rgba(255, 255, 255, .9);
+    transition: .2s ease-in-out;
+}
+
+input,
+label {
+    width: 100%;
+    height: 3rem;
+    font-size: 1.6rem;
+}
+
+input:valid,
+input:focus {
+    border-bottom: 2px solid rgb(64, 179, 224);
+}
+
+input:valid+label,
+input:focus+label {
+    color: rgb(64, 179, 224);
+    font-size: 1.3rem;
+    top: -30px;
+    pointer-events: none;
+}
+
+
+/*button*/
+
+input,
+button {
+    outline: none;
+    margin-bottom: 3rem;
+}
+
+button {
+    width: 100%;
+    padding: 1rem 2rem;
+    border: none;
+    border-radius: .25rem;
+    background-color: rgb(64, 179, 224);
+    color: rgba(255, 255, 255, .8);
+    ;
+    cursor: pointer;
+    transition: .5s;
+}
+
+button:hover {
+    letter-spacing: .1rem;
+    background-color: rgba(64, 179, 224, .9);
+}
+
+
+/*Sign-Up and forgot password -------------------------------------*/
+
+#signup-container {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+#forgot-password,
+#signup {
+    transition: ease-in .1s;
+}
+
+
+/*Footer -------------------------------------*/
+
+footer {
+    font-size: 1.4rem;
+    height: 2rem;
+    margin-top: -2rem;
+    text-align: center;
+    z-index: 100000;
+}
+
+#dev {
+    color: rgba(64, 179, 224, .6);
+    transition: ease-in .1s;
+}
+
+#dev:hover,
+#forgot-password:hover,
+#signup:hover {
+    color: rgb(64, 179, 224);
+}
+
+a {
+    text-decoration: none;
+}
+
+
+/*Responsividade -------------------------------------*/
+
+@media (max-width: 400px) {
+    #signin-form {
+        height: 80%;
+        padding: 1rem 3rem;
+        justify-content: space-evenly;
+        align-items: center;
+    }
+    #logo-container,
+    button {
+        margin-bottom: 0;
+    }
+}
